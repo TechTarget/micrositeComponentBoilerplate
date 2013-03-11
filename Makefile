@@ -21,6 +21,9 @@ endef
 
 default:
 
+	@echo "* compiling jade templates"
+	@jade -D ./example/*.jade
+
 	@echo "* compiling coffeescript..."
 	@coffee -p ${SCRIPT_NAME}.coffee > ${SCRIPT_NAME}.js
 
