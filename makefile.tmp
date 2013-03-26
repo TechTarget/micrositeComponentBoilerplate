@@ -1,4 +1,4 @@
-SCRIPT_NAME = {{pluginName}}
+SCRIPT_NAME = {{@pluginName}}
 FILESIZE_MAX = 1000
 FILESIZE_GZIP = `gzip -c ${SCRIPT_NAME}.min.js | wc -c`
 FILESIZE_PASS = "${FILESIZE_GZIP} bytes  \(^_^)/"

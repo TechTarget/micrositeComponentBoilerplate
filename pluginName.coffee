@@ -1,5 +1,5 @@
 ###!
-{{pluginName}} v0.0.1 (http://okize.github.com/)
+{{@pluginName}} v0.0.1 (http://okize.github.com/)
 Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/licenses/mit-license.php
 ###
 
@@ -15,7 +15,7 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
 
   'use strict'
 
-  pluginName = '{{pluginName}}'
+  pluginName = '{{@pluginName}}'
 
   # default plugin options
   defaults =

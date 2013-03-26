@@ -1,4 +1,4 @@
-# {{pluginName}}
+# {{@pluginName}}
 
 ### Available for use under the [MIT License](http://www.opensource.org/licenses/MIT)
 
