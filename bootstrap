@@ -21,12 +21,14 @@ git clone https://github.com/okize/micrositeComponentBoilerplate.git $plugin
 cd $plugin
 rm -rf ./.git
 for file in `find . -name 'pluginName.*'`; do
-  echo mv "$file" "${file/pluginName/$plugin}"
+  mv "$file" "${file/pluginName/$plugin}"
 done
-cat makefile | pbcopy && echo "SCRIPT_NAME = ${plugin}" > makefile && pbpaste >> makefile
-make
 echo 'creating readme file'
 echo $description > readme.md
+for file in $(grep -r -l '/{{pluginName}}' ./*) ; do
+  sed "s/{{pluginName}}/$plugin/g" $file > $file.$$ && mv $file.$$ $file
+done
+make
 # git init
 # git add . && git commit -m 'initial commit'
 # echo hub create -d "'${description}'"
