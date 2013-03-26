@@ -23,6 +23,7 @@ rm -rf ./.git
 for file in `find . -name 'pluginName.*'`; do
   mv "$file" "${file/pluginName/$plugin}"
 done
+cat makefile | pbcopy && echo "SCRIPT_NAME = ${plugin}" > makefile && pbpaste >> makefile
 echo 'creating readme file'
 echo $description > readme.md
 for file in $(grep -r -l '/{{pluginName}}' ./*) ; do
