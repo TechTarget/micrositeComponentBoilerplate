@@ -1,7 +1,3 @@
-# LINT & MINIFY
-# jshint (>=0.9) & uglifyjs (>=2.2) are required
-
-SCRIPT_NAME = {{pluginName}}
 FILESIZE_MAX = 1000
 FILESIZE_GZIP = `gzip -c ${SCRIPT_NAME}.min.js | wc -c`
 FILESIZE_PASS = "${FILESIZE_GZIP} bytes  \(^_^)/"

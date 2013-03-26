@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# This creates a new plugin based on micrositeComponentBoilerplate repo
+
+############################
+# usage:
+# ./bootstrap [pluginName] [pluginDescription]
+#
+# notes:
+# plugin will be created off of parent directory
+############################
+
+########## Variables
+plugin=$1
+description=$2
+
+########## Script
+echo "creating ${plugin} plugin..."
+cd ..
+git clone https://github.com/okize/micrositeComponentBoilerplate.git $plugin
+cd $plugin
+rm -rf ./.git
+for file in `find . -name 'pluginName.*'`; do
+  echo mv "$file" "${file/pluginName/$plugin}"
+done
+cat makefile | pbcopy && echo "SCRIPT_NAME = ${plugin}" > makefile && pbpaste >> makefile
+make
+echo 'creating readme file'
+echo $description > readme.md
+# git init
+# git add . && git commit -m 'initial commit'
+# echo hub create -d "'${description}'"
+# git push -u origin master
