@@ -15,18 +15,20 @@ plugin=$1
 description=$2
 
 ########## Script
-echo "creating ${plugin} plugin..."
+# echo "creating ${plugin} plugin..."
 cd ..
-git clone https://github.com/okize/micrositeComponentBoilerplate.git $plugin
+# git clone https://github.com/okize/micrositeComponentBoilerplate.git $plugin
 cd $plugin
-rm -rf ./.git
-for file in `find . -name 'pluginName.*'`; do
-  mv "$file" "${file/pluginName/$plugin}"
-done
-echo 'creating readme file'
-echo $description > readme.md
-for file in $(grep -r -l '/{{@pluginName}}' ./*) ; do
-  sed "s/{{@pluginName}}/$plugin/g" $file > $file.$$ && mv $file.$$ $file
+# rm -rf ./.git
+# for file in `find . -name 'pluginName.*'`; do
+#   mv "$file" "${file/pluginName/$plugin}"
+# done
+# echo 'creating readme file'
+# echo $description > readme.md
+for file in $(grep -r -l '{{@pluginName}}' ./*) ; do
+  if [ $file != './bootstrap' ]; then
+     sed "s/{{@pluginName}}/$plugin/g" $file > $file.$$ && mv $file.$$ $file
+  fi
 done
 # cat makefile | pbcopy && echo "SCRIPT_NAME = ${plugin}" > makefile && pbpaste >> makefile
 # mv makefile.tmp makefile
