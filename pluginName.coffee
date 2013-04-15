@@ -1,5 +1,5 @@
 ###!
-{{@pluginName}} v0.0.1 (http://okize.github.com/)
+{{@pluginName}} v0.1.0 (http://okize.github.com/)
 Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/licenses/mit-license.php
 ###
 
@@ -33,11 +33,7 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
 
     # initialize plugin
     init: ->
-      return true
-
-    # another method
-    foo: () ->
-      return false
+      console.log('{{@pluginName}} initialized')
 
   # lightweight wrapper around the constructor that prevents multiple instantiations
   $.fn[pluginName] = (options) ->

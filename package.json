@@ -2,7 +2,7 @@
   "name": "{{@pluginName}}",
   "main": "{{@pluginName}}",
   "description": "jQuery plugin for {{@pluginName}}",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Morgan Wigmanich <okize123@gmail.com> (http://github.com/okize)",
   "licenses": [{
     "type": "MIT",
