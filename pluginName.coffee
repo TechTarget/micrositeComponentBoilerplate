@@ -1,5 +1,5 @@
 ###!
-{{@pluginName}} v0.1.0 (http://okize.github.com/)
+{{@pluginName}} v0.1.0 (http://www.techtarget.com/)
 Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/licenses/mit-license.php
 ###
 

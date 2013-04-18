@@ -20,7 +20,7 @@ description=$2
 ########## Script
 echo "creating ${plugin} plugin..."
 cd ..
-git clone https://github.com/okize/micrositeComponentBoilerplate.git $plugin
+git clone https://github.com/TechTarget/micrositeComponentBoilerplate.git $plugin
 cd $plugin
 rm -rf ./.git
 for file in `find . -name 'pluginName.*'`; do
