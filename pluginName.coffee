@@ -1,6 +1,8 @@
 ###!
-{{@pluginName}} v0.1.0 (http://www.techtarget.com/)
-Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/licenses/mit-license.php
+{{@pluginName}} v0.1.0 (https://github.com/TechTarget/{{@pluginName}})
+Author: Morgan Wigmanich <okize123@gmail.com> (http://github.com/okize)
+Copyright (c) 2013 | Licensed under the MIT license
+http://www.opensource.org/licenses/mit-license.php
 ###
 
 ((factory) ->
@@ -35,7 +37,7 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
     init: ->
       console.log('{{@pluginName}} initialized')
 
-  # lightweight wrapper around the constructor that prevents multiple instantiations
+  # wrapper around the constructor that prevents multiple instantiations
   $.fn[pluginName] = (options) ->
     @each ->
       if !$.data(@, 'plugin_#{pluginName}')
